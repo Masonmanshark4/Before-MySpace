@@ -14,11 +14,7 @@ This app utilizes many different files, database storage, and technologies to cr
 
 - [License](#license)
 
-- [Contributors](#contributors)
-
 - [Tests](#tests)
-
-- [Contact](#contact)
 
 ## Installation
 
