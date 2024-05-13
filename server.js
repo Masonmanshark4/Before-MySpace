@@ -9,16 +9,15 @@ const exphbs = require('express-handlebars');
 const hbs = exphbs.create({ helpers });
 
 const session = require('express-session');
-
-const app = express();
-const PORT = process.env.PORT || 3001;
-
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+const app = express();
+const PORT = process.env.PORT || 3001; // Use process.env.PORT for Heroku
+
 const sess = {
-  secret: 'bigbluedog',
+  secret: process.env.SESSION_SECRET || 'bigbluedog', // Use process.env.SESSION_SECRET for Heroku
   cookie: {
-        expires: 10 * 60 * 1000
+    expires: 10 * 60 * 1000
   },
   resave: true,
   rolling: true,
@@ -40,5 +39,5 @@ app.set('view engine', 'handlebars');
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening on http://localhost:3001/'));
+  app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}/`));
 });
