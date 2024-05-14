@@ -42,9 +42,16 @@ A database will need to be created first then seeded wih data.
 
 ## Usage
 
+This particular challenge was one for getting me as a developer to understand using Node.js, Express.js, Sequelize, Handlebars.js, and MVC architecture. Now for users it is a space for individuals to gather make posts and comment on others' posts. It only allows users who have logged in to both view and make comments on posts. As well as only let logged in users make or edit posts.
+
 ## License
 
+There is no license.
 
 ## Tests
 
 There are currently no tests for this application.
+
+## Link to GetHub Website
+
+[Repository](https://github.com/Masonmanshark4/Before-MySpace)
